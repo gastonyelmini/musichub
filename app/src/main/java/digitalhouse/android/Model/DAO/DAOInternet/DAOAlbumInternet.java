@@ -1,7 +1,7 @@
 package digitalhouse.android.Model.DAO.DAOInternet;
 
-import digitalhouse.android.Model.DAO.Helpers.DeezerHelper;
-import digitalhouse.android.Model.DAO.Helpers.TareaInternet;
+import digitalhouse.android.Helpers.DeezerHelper;
+import digitalhouse.android.Helpers.InternetAsync;
 import digitalhouse.android.Model.POJO.AlbumContainer;
 import digitalhouse.android.Util.ResultListener;
 
@@ -12,7 +12,7 @@ import digitalhouse.android.Util.ResultListener;
 public class DAOAlbumInternet {
 
     public void getAlbumList (ResultListener<AlbumContainer> listener, Integer id){
-        TareaInternet<AlbumContainer> taskAlbum = new TareaInternet(listener, AlbumContainer.class);
+        InternetAsync<AlbumContainer> taskAlbum = new InternetAsync(listener, AlbumContainer.class);
         String url = DeezerHelper.chartAlbumsPorGenero(id);
         taskAlbum.execute(url);
     }

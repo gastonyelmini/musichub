@@ -122,8 +122,6 @@ public class ActivityMain extends AppCompatActivity implements FragmentListMusic
         actionBarDrawerToggle.syncState();
 
         //configuraciones del actionbar
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayUseLogoEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
@@ -149,19 +147,6 @@ public class ActivityMain extends AppCompatActivity implements FragmentListMusic
                         case R.id.menu_seccion_mymusic:
                             loadFragment(fragmentFavorites, false);
                             break;
-//                    case R.id.menu_seccion_settings:
-//                        // Implementar
-//                        break;
-//                    case R.id.menu_seccion_help:
-//                        loadFragment(fragmentHelp, true);
-//                        break;
-//                    case R.id.menu_seccion_signout:
-//                        finish();
-//                        Intent intent = new Intent(Intent.ACTION_MAIN);
-//                        intent.addCategory(Intent.CATEGORY_HOME);
-//                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//                        startActivity(intent);
-//                        break;
                         case R.id.menu_seccion_register:
                             if (mAuth.getCurrentUser() == null){
                                 Intent intent1 = new Intent(ActivityMain.this, ActivityLogin.class);
@@ -234,14 +219,6 @@ public class ActivityMain extends AppCompatActivity implements FragmentListMusic
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_search, menu);
 
-//        MenuItem searchItem = menu.findItem(R.id.buscarItem);
-//
-//        SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
-//        searchView.setOnQueryTextListener(this);
-//
-//
-//        MenuItemCompat.setOnActionExpandListener(searchItem, this);
-
         return super.onCreateOptionsMenu(menu);
 
     }
@@ -261,9 +238,6 @@ public class ActivityMain extends AppCompatActivity implements FragmentListMusic
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
             bundle.putString("Transition", imageMusic.getTransitionName());
-//            fragmentSongViewPager.setSharedElementEnterTransition(new ImageTransition());
-//            fragmentSongViewPager.setEnterTransition(new android.transition.Fade());
-//            fragmentListMusic.setExitTransition(new android.transition.Fade());
             getSupportFragmentManager()
                     .beginTransaction()
                     .setCustomAnimations(R.anim.fade_in, R.anim.fade_out)
@@ -367,14 +341,6 @@ public class ActivityMain extends AppCompatActivity implements FragmentListMusic
             userEmail = mAuth.getCurrentUser().getEmail();
             userDisplayName = mAuth.getCurrentUser().getDisplayName();
         }
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-//        if (mAuthListener != null){
-//            mAuth.removeAuthStateListener(mAuthListener);
-//        }
     }
 
     public void loadFragment(Fragment fragment, Boolean addToBack){

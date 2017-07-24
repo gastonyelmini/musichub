@@ -1,11 +1,8 @@
 package digitalhouse.android.View.Fragments;
 
-import android.content.ComponentName;
 import android.content.Intent;
-import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.IBinder;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -22,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import digitalhouse.android.Controller.TracklistController;
-import digitalhouse.android.Model.DAO.Helpers.MediaPlayerHelper;
+import digitalhouse.android.Helpers.MediaPlayerHelper;
 import digitalhouse.android.Model.DAO.DAOSDatabase.DAOFavoritesDatabase;
 import digitalhouse.android.Model.POJO.Track;
 import digitalhouse.android.Model.POJO.TrackContainer;

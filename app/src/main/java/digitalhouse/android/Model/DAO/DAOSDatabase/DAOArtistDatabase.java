@@ -2,7 +2,7 @@ package digitalhouse.android.Model.DAO.DAOSDatabase;
 
 import android.content.Context;
 
-import digitalhouse.android.Model.DAO.Helpers.DatabaseHelper;
+import digitalhouse.android.Helpers.DatabaseHelper;
 
 /**
  * Created by gaston on 04/07/17.

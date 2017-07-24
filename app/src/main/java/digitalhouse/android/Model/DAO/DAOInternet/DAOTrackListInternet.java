@@ -1,7 +1,6 @@
 package digitalhouse.android.Model.DAO.DAOInternet;
 
-import digitalhouse.android.Model.DAO.Helpers.DeezerHelper;
-import digitalhouse.android.Model.DAO.Helpers.TareaInternet;
+import digitalhouse.android.Helpers.InternetAsync;
 import digitalhouse.android.Model.POJO.TrackContainer;
 import digitalhouse.android.Util.ResultListener;
 
@@ -12,7 +11,7 @@ import digitalhouse.android.Util.ResultListener;
 public class DAOTrackListInternet {
 
     public void obtenerSong (ResultListener<TrackContainer> listener, String requestURL){
-        TareaInternet<TrackContainer> taskSong = new TareaInternet(listener, TrackContainer.class);
+        InternetAsync<TrackContainer> taskSong = new InternetAsync(listener, TrackContainer.class);
         String url = requestURL;
         taskSong.execute(url);
     }

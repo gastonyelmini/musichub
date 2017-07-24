@@ -5,7 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import digitalhouse.android.Model.DAO.Helpers.DatabaseHelper;
+import digitalhouse.android.Helpers.DatabaseHelper;
 import digitalhouse.android.Model.POJO.Genre;
 
 /**
