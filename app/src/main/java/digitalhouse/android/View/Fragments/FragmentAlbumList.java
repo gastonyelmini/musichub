@@ -52,7 +52,7 @@ public class FragmentAlbumList extends Fragment implements SwipeRefreshLayout.On
         View view = inflater.inflate(R.layout.fragment_album_list, container, false);
 
         final RecyclerView recyclerViewAlbums = (RecyclerView) view.findViewById(R.id.recyclerViewAlbumList);
-        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(view.getContext(), 3);
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(view.getContext(), 2);
         recyclerViewAlbums.setLayoutManager(layoutManager);
 
         //Adapter
