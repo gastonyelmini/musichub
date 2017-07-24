@@ -26,7 +26,7 @@ public class ActivitySplashScreen extends AppCompatActivity {
                 Intent intent = new Intent(ActivitySplashScreen.this, ActivityMain.class);
                 startActivity(intent);
                 //evitar que se vuelve a ver esta activity si el user vuelve para atras
-                ActivitySplashScreen.this.finish();
+                finish();
             }
         }, 1500);
     }

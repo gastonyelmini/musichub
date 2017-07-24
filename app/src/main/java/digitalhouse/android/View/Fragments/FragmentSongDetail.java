@@ -110,7 +110,7 @@ public class FragmentSongDetail extends Fragment {
 
         GlideApp.with(context).load(bundleImageResource).placeholder(R.drawable.placeholdermusic).into(imageViewSongImage);
 
-        // Cambiar la foto segun el color de la imagen
+        //Cambiar la foto segun el color de la imagen
 
         imageViewDetalle = (ImageView) view.findViewById(R.id.imageViewDetalle);
 

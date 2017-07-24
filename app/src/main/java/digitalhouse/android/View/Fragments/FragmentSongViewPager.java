@@ -34,7 +34,6 @@ public class FragmentSongViewPager extends Fragment {
     //Atributos de vista
     private ViewPager viewPager;
     private View view;
-    private Snackbar snackbar;
     private ImageView botonPlay;
     private SeekBar seekBar;
     private TextView textViewCurrentPosition;
